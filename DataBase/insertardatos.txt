@@ -1,0 +1,37 @@
+-- Inserción de datos en la tabla Conductores
+INSERT INTO Conductores (IdConductor, Nombre, Apellido, Cedula, FechaLicencia, TarifaPorServicio) VALUES 
+(1, 'Navio', 'Orozco', '1234567890', '2025-01-01', 25000),
+(2, 'Augusto', 'Toconas', '0987654321', '2025-02-02', 30000);
+
+-- Inserción de datos en la tabla Vehiculos
+INSERT INTO Vehiculos (IdVehiculo, Placa, NoOrden, Capacidad, IdEstado) VALUES 
+(1, 'TBS229',629,28,1),
+(2, 'VCC752',821,30,1);
+
+
+-- Inserción de datos en la tabla Gastos
+INSERT INTO Gastos (IdGastos, IdVehiculo, Descripcion, Monto, Fecha) VALUES 
+(1, 1, 'Combustible',200000, '2024-01-05'),
+(2, 2, 'Mantenimiento',350000, '2024-02-10');
+
+-- Inserción de datos en la tabla Contratistas
+INSERT INTO Contratistas (IdContratista, Nombre, Nit, PersonaContacto, TelefonoContacto) VALUES 
+(1, 'LAURELES', '123456789', 'Ana Lopez', '987654321'),
+(2, 'JARDINEZ DE PAZ', '987654321', 'Carlos Martinez', '123456789');
+
+-- Inserción de datos en la tabla Servicios
+INSERT INTO Servicios (IdServicio, IdContratista, Fecha, Hora, Origen, Destino, PagoServicio, EstadoServicio) VALUES 
+(1, 1, '2024-01-10', '08:00', 'SALA LAURELES CENTRO', 'CEMENTERIO CAMPO SANTO', 140000, 3),
+(2, 2, '2024-02-15', '10:00', 'SALA JARDINEZ DE PAZ', 'CEMENTERIO DE JARDINEZ DE PAZ', 150000, 4);
+
+-- Inserción de datos en la tabla Asignacion
+INSERT INTO Asignacion (IdAsignacion, IdServicio, IdVehiculo, IdConductor, PagoExtraConductor) VALUES 
+(1, 1, 1, 1, 0),
+(2, 2, 2, 2, 0);
+-- Inserción de datos en la tabla Estados
+
+INSERT INTO Estados (IdEstado, DescripcionEstado) VALUES 
+(1, 'Activo'),
+(2, 'Inactivo');
+(3, 'Completado'),
+(4, 'Pendiente');
